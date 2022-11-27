@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/jaspe/wkspaces/CS-2043-Group-8_2/SQLLiteTutorialProject/Housing_Database.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="4359"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,9:mainFURNITURE"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="FURNITURE" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="90"/><column index="2" value="110"/><column index="3" value="115"/><column index="4" value="111"/><column index="5" value="114"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="TRANSACTIONS" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="162"/><column index="2" value="601"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">-- CS 2043 Project
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/jaspe/wkspaces/CS-2043-Group-8_2/SQLLiteTutorialProject/Housing_Database.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure pragmas browser query" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="4359"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,9:mainFURNITURE"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="FURNITURE" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="90"/><column index="2" value="110"/><column index="3" value="115"/><column index="4" value="111"/><column index="5" value="114"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="TRANSACTIONS" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="162"/><column index="2" value="601"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">-- CS 2043 Project
 DROP VIEW IF EXISTS KEY_HIST;
 DROP VIEW IF EXISTS KEYS_AVAIL;
 DROP VIEW IF EXISTS STUDENT_BLACKLIST;
@@ -192,42 +192,140 @@ INSERT INTO FURNITURE VALUES(6, 1, 2, 'BED', 'Single bed');
 INSERT INTO FURNITURE VALUES(7, 1, 3, 'BED', 'Single bed');
 INSERT INTO FURNITURE VALUES(8, 1, 3, 'BED', 'Single bed');
 INSERT INTO FURNITURE VALUES(9, 1, 4, 'BED', 'Single bed');
-INSERT INTO FURNITURE VALUES(10, 1, 4, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(10, 1, 4, 'BED', 'Single bed');
 
+INSERT INTO FURNITURE VALUES(11, 1, 1, 'CHAIR', 'Recliner');
 --desks
-INSERT INTO FURNITURE VALUES(12, 1, 1, 'DESK', 'Single Desk');
-INSERT INTO FURNITURE VALUES(13, 1, 2, 'DESK', 'Single Desk');
-INSERT INTO FURNITURE VALUES(14, 1, 3, 'DESK', 'Single Desk');
+
+INSERT INTO FURNITURE VALUES(12, 1, 1, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(13, 1, 2, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(14, 1, 3, 'DESK', 'Single Desk');
 INSERT INTO FURNITURE VALUES(15, 1, 4, 'DESK', 'Single Desk');
-
-
--- Building 2
+
+
+-- Building 2
 -- chairs
-INSERT INTO FURNITURE VALUES(16, 2, 1, 'CHAIR', 'Office chair');
-INSERT INTO FURNITURE VALUES(17, 2, 2, 'CHAIR', 'Office chair');
-INSERT INTO FURNITURE VALUES(18, 2, 3, 'CHAIR', 'Office chair');
-INSERT INTO FURNITURE VALUES(19, 2, 4, 'CHAIR', 'Office chair');
+INSERT INTO FURNITURE VALUES(16, 2, 1, 'CHAIR', 'Office chair');
+INSERT INTO FURNITURE VALUES(17, 2, 2, 'CHAIR', 'Office chair');
+INSERT INTO FURNITURE VALUES(18, 2, 3, 'CHAIR', 'Office chair');
+INSERT INTO FURNITURE VALUES(19, 2, 4, 'CHAIR', 'Office chair');
+
+-- beds
+
+INSERT INTO FURNITURE VALUES(20, 2, 1, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(21, 2, 2, 'BED', 'Single bed');
+
+-- INSERTING 2 beds into the double rooms
+INSERT INTO FURNITURE VALUES(22, 2, 3, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(23, 2, 3, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(24, 2, 4, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(25, 2, 4, 'BED', 'Single bed');
+
+-- desks
+INSERT INTO FURNITURE VALUES(26, 2, 1, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(27, 2, 2, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(28, 2, 3, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(29, 2, 4, 'DESK', 'Single Desk');
+
+-- Building 3
+
+-- chairs
+
+INSERT INTO FURNITURE VALUES(30, 3, 1, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(31, 3, 2, 'CHAIR', 'Office chair');
+INSERT INTO FURNITURE VALUES(32, 3, 3, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(33, 3, 4, 'CHAIR', 'Office chair');
+INSERT INTO FURNITURE VALUES(34, 3, 5, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(35, 3, 6, 'CHAIR', 'Office chair');
 
 -- beds
 
-INSERT INTO FURNITURE VALUES(20, 2, 1, 'BED', 'Single bed');
-INSERT INTO FURNITURE VALUES(21, 2, 2, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(36, 3, 1, 'BED', 'Single Bed');
+INSERT INTO FURNITURE VALUES(37, 3, 1, 'BED', 'Single Bed');
+
+INSERT INTO FURNITURE VALUES(38, 3, 2, 'BED', 'Single Bed');
+INSERT INTO FURNITURE VALUES(39, 3, 2, 'BED', 'Single Bed');
+
+INSERT INTO FURNITURE VALUES(40, 3, 3, 'BED', 'Single Bed');
+INSERT INTO FURNITURE VALUES(41, 3, 3, 'BED', 'Single Bed');
+
+INSERT INTO FURNITURE VALUES(42, 3, 4, 'BED', 'Single Bed');
+INSERT INTO FURNITURE VALUES(43, 3, 4, 'BED', 'Single Bed');
+
+INSERT INTO FURNITURE VALUES(44, 3, 5, 'BED', 'Single Bed');
+INSERT INTO FURNITURE VALUES(45, 3, 5, 'BED', 'Single Bed');
+INSERT INTO FURNITURE VALUES(46, 3, 5, 'BED', 'Single Bed');
+
+INSERT INTO FURNITURE VALUES(47, 3, 6, 'BED', 'Single Bed');
+INSERT INTO FURNITURE VALUES(48, 3, 6, 'BED', 'Single Bed');
+INSERT INTO FURNITURE VALUES(49, 3, 6, 'BED', 'Single Bed');
+
+
+INSERT INTO FURNITURE VALUES(50, 3, 1, 'DESK', 'Large Desk');
+INSERT INTO FURNITURE VALUES(51, 3, 2, 'DESK', 'Large Desk');
+INSERT INTO FURNITURE VALUES(52, 3, 3, 'DESK', 'Large Desk');
+INSERT INTO FURNITURE VALUES(53, 3, 4, 'DESK', 'Large Desk');
+INSERT INTO FURNITURE VALUES(54, 3, 5, 'DESK', 'Large Desk');
+INSERT INTO FURNITURE VALUES(55, 3, 6, 'DESK', 'Large Desk');
+
+
+-- Building 4
+INSERT INTO FURNITURE VALUES(56, 4, 1, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(57, 4, 2, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(58, 4, 3, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(59, 4, 4, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(60, 4, 5, 'CHAIR', 'Wooden chair');
+
+INSERT INTO FURNITURE VALUES(61, 4, 1, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(62, 4, 2, 'BED', 'Single bed');
 
 -- INSERTING 2 beds into the double rooms
-INSERT INTO FURNITURE VALUES(22, 2, 3, 'BED', 'Single bed');
-INSERT INTO FURNITURE VALUES(23, 2, 3, 'BED', 'Single bed');
-INSERT INTO FURNITURE VALUES(24, 2, 4, 'BED', 'Single bed');
-INSERT INTO FURNITURE VALUES(25, 2, 4, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(63, 4, 3, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(64, 4, 3, 'BED', 'Single bed');
 
--- desks
-INSERT INTO FURNITURE VALUES(26, 2, 1, 'DESK', 'Single Desk');
-INSERT INTO FURNITURE VALUES(27, 2, 2, 'DESK', 'Single Desk');
-INSERT INTO FURNITURE VALUES(28, 2, 3, 'DESK', 'Single Desk');
-INSERT INTO FURNITURE VALUES(29, 2, 4, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(65, 4, 4, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(66, 4, 4, 'BED', 'Single bed');
+
+INSERT INTO FURNITURE VALUES(67, 4, 5, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(68, 4, 5, 'BED', 'Single bed');
 
 
- 
+--desks
+INSERT INTO FURNITURE VALUES(69, 4, 1, 'DESK', 'Nice Desk');
+INSERT INTO FURNITURE VALUES(70, 4, 2, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(71, 4, 3, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(72, 4, 4, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(73, 4, 5, 'DESK', 'Single Desk');
 
+-- Building 5
+INSERT INTO FURNITURE VALUES(74, 4, 1, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(75, 4, 2, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(76, 4, 3, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(77, 4, 4, 'CHAIR', 'Wooden chair');
+INSERT INTO FURNITURE VALUES(78, 4, 5, 'CHAIR', 'Wooden chair');
+
+INSERT INTO FURNITURE VALUES(79, 4, 1, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(80, 4, 2, 'BED', 'Single bed');
+
+-- INSERTING 2 beds into the double rooms
+INSERT INTO FURNITURE VALUES(81, 5, 3, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(82, 5, 3, 'BED', 'Single bed');
+
+INSERT INTO FURNITURE VALUES(83, 5, 4, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(84, 5, 4, 'BED', 'Single bed');
+
+INSERT INTO FURNITURE VALUES(85, 5, 5, 'BED', 'Single bed');
+INSERT INTO FURNITURE VALUES(86, 5, 5, 'BED', 'Single bed');
+
+
+--desks
+INSERT INTO FURNITURE VALUES(87, 5, 1, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(88, 5, 2, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(89, 5, 3, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(90, 5, 4, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(91, 5, 5, 'DESK', 'Single Desk');
+ 
+
 
 
 -- PLACEHOLDER KEY
@@ -351,16 +449,16 @@ create view KEY_HIST as
 
 update STUDENT 
 set BLDG_NUM = NULL, ROOM_NUM = NULL, KEY_NUM = NULL
-WHERE STUDENT_ID = 3371610;
-
-
--- furniture ID, bldg num, room num
-INSERT INTO FURNITURE VALUES(7, 1, 1, 'DESK', 'Single Desk');
-INSERT INTO FURNITURE VALUES(2, 1, 2, 'DESK', 'Single Desk');
-INSERT INTO FURNITURE VALUES(3, 1, 3, 'DESK', 'Single Desk');
-INSERT INTO FURNITURE VALUES(4, 1, 4, 'DESK', 'Single Desk');
-
-INSERT INTO FURNITURE VALUES(5, 1, 1, 'BED', 'Single bed');
+WHERE STUDENT_ID = 3371610;
+
+
+-- furniture ID, bldg num, room num
+INSERT INTO FURNITURE VALUES(7, 1, 1, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(2, 1, 2, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(3, 1, 3, 'DESK', 'Single Desk');
+INSERT INTO FURNITURE VALUES(4, 1, 4, 'DESK', 'Single Desk');
+
+INSERT INTO FURNITURE VALUES(5, 1, 1, 'BED', 'Single bed');
 INSERT INTO FURNITURE VALUES(6, 1, 2, 'BED', 'Single bed');
 
 /*
