@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 86245c422dad54345bb755b009cd5d10
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - drillDownBackground: {instanceID: 0}
+  - drillDownPanel: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
