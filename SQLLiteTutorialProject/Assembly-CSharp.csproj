@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Unused Scripts\HitCountExample.cs" />
+     <Compile Include="Assets\DrillDownSecondLayer.cs" />
      <Compile Include="Assets\Scripts\StudentUpdater.cs" />
      <Compile Include="Assets\AddStudentController.cs" />
      <Compile Include="Assets\DrillDownButton.cs" />
@@ -45,8 +46,10 @@
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\Scripts\LoginManager.cs" />
      <Compile Include="Assets\Scripts\Unused Scripts\ResidenceButton.cs" />
+     <Compile Include="Assets\ReturnButtonController.cs" />
      <Compile Include="Assets\Scripts\Unused Scripts\TestChangingValues.cs" />
      <Compile Include="Assets\DrillDownButtonController.cs" />
+     <Compile Include="Assets\DrillDownTwo.cs" />
      <Compile Include="Assets\Scripts\ButtonScript.cs" />
      <Compile Include="Assets\Scripts\Unused Scripts\SqliteExampleSimple.cs" />
      <Compile Include="Assets\Scripts\PasswordChangeManager.cs" />

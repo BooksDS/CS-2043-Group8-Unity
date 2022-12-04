@@ -96,6 +96,9 @@ ScriptsOnlyBuild:
     fullTypeName: PasswordChangeManager
     methodName: ChangePassword
   - assembly: Assembly-CSharp
+    fullTypeName: PasswordChangeManager
+    methodName: ReturnToMainPanel
+  - assembly: Assembly-CSharp
     fullTypeName: LoginManager
     methodName: Login
   - assembly: Assembly-CSharp
@@ -125,6 +128,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: AddStudentController
     methodName: AddStudent
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: ShowStudents
   - assembly: Assembly-CSharp
     fullTypeName: ButtonScript
     methodName: ShowBlacklist
@@ -1223,4 +1229,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Login Scene.unity
   - Assets/Scenes/Main Scene.unity
-  playerPath: C:/Users/jaspe/OneDrive/Documents/UNB CS/CS 2043/Project Work/Builds/SQLLiteTutorialProject.exe
+  playerPath: C:/Users/jaspe/OneDrive/Documents/UNB CS/CS 2043/Project Work/SQLLiteTutorialProject.exe

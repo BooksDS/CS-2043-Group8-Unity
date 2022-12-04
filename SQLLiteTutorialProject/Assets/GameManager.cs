@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject errorPanel;
 
+    public GameObject drilldownReturnButton;
+
+    public DrillDownButtonController currentButton;
+
     private void Start()
     {
         instance = this;

@@ -21,10 +21,18 @@ public class DrillDownButtonController : MonoBehaviour
 
     public void OpenDrillDown()
     {
+        if (DrillDownSecondLayer.instance != null)
+        {
+            DrillDownSecondLayer.instance.DestroyButtons();
+        }
+
+        GameManager.instance.currentButton = this;
+
+
         GameManager.instance.drillDownBackground.SetActive(true);
         GameManager.instance.drillDownPanel.SetActive(true);
+        GameManager.instance.drilldownReturnButton.SetActive(false);
 
-        
 
         string tableName = DrilldownButtonManager.instance.table.name;
 
@@ -130,9 +138,14 @@ public class DrillDownButtonController : MonoBehaviour
             n++;
         }
 
+        
+
         //closing connection
         dbConnection.Close();
-        
+
+        DrillDownSecondLayer.instance.ClearButtons();
+      
+
     }
 
     public void stuDrillDown()

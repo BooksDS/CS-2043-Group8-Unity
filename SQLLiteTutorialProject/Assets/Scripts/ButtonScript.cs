@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
-    public TableUI[] table = new TableUI[4];
+    public TableUI[] table = new TableUI[5];
     public DrilldownButtonManager drillDownButtonManager;
 
     public Button BlacklistButton;
@@ -238,6 +238,39 @@ public class ButtonScript : MonoBehaviour
 
         }
         drillDownButtonManager.ClearButtons(table[3], tableCyan);
+        dbConnection.Close();
+
+    }
+
+    public void showLog()
+    {
+        ClearTable();
+        table[4].gameObject.SetActive(true);
+        BlacklistButton.gameObject.SetActive(false);
+
+        IDbConnection dbConnection = OpenDatabase();
+        //creating command to leverage against server
+        IDbCommand dbCommandReadValues = dbConnection.CreateCommand();
+        //assigning command
+        dbCommandReadValues.CommandText = "SELECT * FROM TRANSACTIONS";
+        //set new dataReader object as result of executed command
+        IDataReader dataReader = dbCommandReadValues.ExecuteReader();
+
+        int n = 1;
+
+        while (dataReader.Read())
+        {
+            table[4].Rows = n + 1;
+            table[4].transform.GetChild(0).GetChild(n).transform.localScale = new Vector3(1f, 1f, 1f);
+            table[4].GetCell(n, 0).text = dataReader.GetDateTime(0).ToString(); //TimeStamp
+            table[4].GetCell(n, 1).text = dataReader.GetString(1); //Transaction Log
+            
+            n++;
+
+
+        }
+
+        drillDownButtonManager.DestroyButtons();
         dbConnection.Close();
 
     }
